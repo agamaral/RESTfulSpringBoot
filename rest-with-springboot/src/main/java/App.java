@@ -1,13 +1,14 @@
-package br.com.agamaral.restSpring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class RestSpringApplication {
+@ComponentScan(basePackages = { "br.com.agamaral" }) // solução
+public class App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestSpringApplication.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 }
